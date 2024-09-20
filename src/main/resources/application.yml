@@ -9,3 +9,14 @@ spring:
   sql:
     init:
       mode: always
+  cloud:
+    config:
+      uri: http://localhost:8080
+
+management.endpoints.web.exposure.include: prometheus,health
+management.endpoint.prometheus.enabled: true
+management.metrics.export.prometheus.enabled: true
+
+springdoc:
+  swagger-ui:
+    enable: true

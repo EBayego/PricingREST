@@ -1,4 +1,4 @@
-package com.example.pricing.infrastructure.configuration.mapper;
+package com.example.pricing.infrastructure.mapper;
 
 import org.springframework.stereotype.Component;
 
