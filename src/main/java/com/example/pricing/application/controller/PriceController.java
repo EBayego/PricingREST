@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.pricing.application.service.PriceService;
 import com.example.pricing.domain.model.Price;
 import com.example.pricing.domain.model.PriceDTO;
-import com.example.pricing.infrastructure.configuration.mapper.PriceMapper;
+import com.example.pricing.infrastructure.mapper.PriceMapper;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
