@@ -15,12 +15,14 @@ import java.time.LocalDateTime;
 
 @Service
 public class PriceService {
-
+	
 	@Autowired
 	private PriceRepository priceRepository;
 
 	public Mono<Price> getApplicablePrice(Long productId, Long brandId, LocalDateTime applicationDate) {
-		return priceRepository.findPriceWithinDateRange(productId, brandId, applicationDate).switchIfEmpty(Mono.error(new PriceNotFoundException("No applicable price found")));
+		Mono<Price> mprice = priceRepository.findPriceWithinDateRange(productId, brandId, applicationDate).switchIfEmpty(Mono.error(new PriceNotFoundException("No applicable price found")));
+		System.out.println("mprice to text: " + mprice.block());
+		return mprice;
 	}
 	
 	public Flux<Price> getPrices() {
