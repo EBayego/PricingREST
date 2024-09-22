@@ -43,6 +43,10 @@ Para la version de OpenAPI con WebFlux, debe de haber algun tipo de incompatibil
 
 Se ha incluido Prometheus para capturar métricas de Spring Boot, para poder utilizar Grafana para monitorear el rendimiento de la aplicación. 
 
+### OpenShift
+
+Se ha dockerizado la aplicación con un Dockerfile, y los siguientes pasos serían crear la aplicación en OpenShift a partir del repositorio Git, generando la imagen gracias al Dockerfile, un BuildConfig y un DeploymentConfig. Después, se expone la aplicación y ya se podrá acceder a ella.
+
 ### Postman
 
 Se ha utilizado Postman para mandar peticiones a la API y comprobar que la respuesta es la deseada.
